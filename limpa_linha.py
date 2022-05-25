@@ -1,4 +1,5 @@
 from openpyxl import load_workbook
+import os
 def limpa_linha (path_completo):
     #Função que pega o caminho de uma planilha e limpa os dados nulos
 
@@ -9,7 +10,7 @@ def limpa_linha (path_completo):
         flag = ws.cell(i,26).value
         if flag == None:
             ws.delete_rows(i,1)
-            wb.save("Compras2.xlsx")
+            wb.save(path_completo)
             i-=1
         i+=1
-    wb.save("Compras2.xlsx")
+    wb.save(path_completo)
