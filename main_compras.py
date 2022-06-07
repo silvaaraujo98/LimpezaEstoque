@@ -10,10 +10,11 @@ path_3 = os.getcwd()+r'\Processado'
 
 for i in os.listdir(path_1):
     trans_x(path_1 + r"/" + i)
-    shutil.move(path_1 +r"/" + i + "x",path_2 +r"/" + i)
+    shutil.move(path_1 +r"/" + i + "x",path_2 +r"/" + i +"x")
+print('Transferido!!')
 
 
 for i in os.listdir(path_2):
     transforma_base(path_2 +r"/" + i)
     shutil.move(path_2 +r"/" + i,path_3 +r"/" + i)
-
+print('Feito!!')
